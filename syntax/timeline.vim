@@ -15,7 +15,7 @@ syntax match timelineLabelNOTE	"\v^NOTE:"	| highlight timelineLabelNOTE	ctermfg=
 syntax match timelineLabelREV	"\v^REVIEW:"	| highlight timelineLabelREV	ctermfg=DarkCyan
 syntax match timelineLabelSEE	"\v^SEE:"	| highlight timelineLabelSEE	ctermfg=DarkCyan
 syntax match timelineLabelDEL "\v^(CLEAN|DELETE|REMOVE|KILL):" | highlight timelineLabelDEL ctermfg=DarkRed	| "<-- consider deleting  such-marked data from the file.
-syntax match timelineLabelOMIT "\v^[ \t]*\[\.\.\.\]( #.*)?" | highlight timelineLabelOMIT ctermfg=Blue cterm=italic	| "<-- To mark deleted fragments of log listings, etc.
+syntax match timelineLabelOMIT "\v^[ \t]*\[\.\.\.\]( .*)?$" | highlight timelineLabelOMIT ctermfg=Blue cterm=italic	| "<-- To mark deleted fragments of log listings, etc.
 "----
 syntax match timelineLabel "DZIENNIK:"
 syntax match timelineLabel "BACKLOG:"
