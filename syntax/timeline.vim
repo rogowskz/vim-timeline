@@ -8,18 +8,13 @@ endif
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 
 "==== Labels:
-syntax match timelineLabelTODO "TODO:"
-highlight timelineLabelTODO ctermfg=DarkRed
-syntax match timelineLabelDONE "DONE:"
-highlight timelineLabelDONE ctermfg=DarkCyan
-syntax match timelineLabelDEBT "DEBT:"	"<-- 'technical debt' kind of things
-highlight timelineLabelDEBT ctermfg=DarkYellow
-syntax match timelineLabelNOTE "NOTE:"
-highlight timelineLabelNOTE ctermfg=DarkCyan
-syntax match timelineLabelREVIEW "REVIEW:"
-highlight timelineLabelREVIEW ctermfg=DarkCyan
-syntax match timelineLabelCLEAN "CLEAN:"	"<-- consider deleting  such-marked data from the file.
-highlight timelineLabelCLEAN ctermfg=DarkRed
+syntax match timelineLabelTODO	"TODO:"		| highlight timelineLabelTODO	ctermfg=DarkRed
+syntax match timelineLabelDONE	"DONE:"		| highlight timelineLabelDONE	ctermfg=DarkCyan
+syntax match timelineLabelDEBT	"DEBT:"		| highlight timelineLabelDEBT	ctermfg=DarkYellow	| "<-- 'technical debt' kind of things
+syntax match timelineLabelNOTE	"NOTE:"		| highlight timelineLabelNOTE	ctermfg=DarkCyan
+syntax match timelineLabelREV	"REVIEW:"	| highlight timelineLabelREV	ctermfg=DarkCyan
+syntax match timelineLabelSEE	"SEE:"		| highlight timelineLabelSEE	ctermfg=DarkCyan
+syntax match timelineLabelDEL "\v(CLEAN|DELETE|REMOVE|KILL):" | highlight timelineLabelDEL ctermfg=DarkRed	| "<-- consider deleting  such-marked data from the file.
 "----
 syntax match timelineLabel "DZIENNIK:"
 syntax match timelineLabel "BACKLOG:"
