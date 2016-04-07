@@ -8,7 +8,7 @@ endif
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 
 "==== Labels:
-syntax match timelineLabelTODO	"\v^TODO:(\~)?\!*.+$"	| highlight timelineLabelTODO	ctermfg=DarkRed
+syntax match timelineLabelTODO	"\v(^|\!)TODO:(\~)?\!*.+$"	| highlight timelineLabelTODO	ctermfg=DarkRed
 syntax match timelineLabelDONE	"\v^DONE:"	| highlight timelineLabelDONE	ctermfg=DarkCyan
 syntax match timelineLabelDEBT	"\v^DEBT:"	| highlight timelineLabelDEBT	ctermfg=DarkYellow	| "<-- 'technical debt' kind of things
 syntax match timelineLabelNOTE	"\v^NOTE:"	| highlight timelineLabelNOTE	ctermfg=DarkCyan
