@@ -23,7 +23,7 @@ syntax match timelineTransaction "\v^\$ .*$"
 highlight timelineTransaction ctermfg=DarkGreen
 
 "----------------
-syntax match timelineDate "\v^[123]([0-9])? (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [12][0-9][0-9][0-9]( #.*)?$"
+syntax match timelineDate "\v^(([1-9])|([12][0-9])|(30|31)) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [12][0-9][0-9][0-9]( #.*)?$"
 highlight timelineDate ctermfg=DarkMagenta
 
 
