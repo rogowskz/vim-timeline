@@ -8,13 +8,14 @@ endif
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 
 "==== Labels:
-syntax match timelineLabelTODO	"TODO:"		| highlight timelineLabelTODO	ctermfg=DarkRed
-syntax match timelineLabelDONE	"DONE:"		| highlight timelineLabelDONE	ctermfg=DarkCyan
-syntax match timelineLabelDEBT	"DEBT:"		| highlight timelineLabelDEBT	ctermfg=DarkYellow	| "<-- 'technical debt' kind of things
-syntax match timelineLabelNOTE	"NOTE:"		| highlight timelineLabelNOTE	ctermfg=DarkCyan
-syntax match timelineLabelREV	"REVIEW:"	| highlight timelineLabelREV	ctermfg=DarkCyan
-syntax match timelineLabelSEE	"SEE:"		| highlight timelineLabelSEE	ctermfg=DarkCyan
-syntax match timelineLabelDEL "\v(CLEAN|DELETE|REMOVE|KILL):" | highlight timelineLabelDEL ctermfg=DarkRed	| "<-- consider deleting  such-marked data from the file.
+syntax match timelineLabelTODO	"\v^TODO:(\~)?\!*.+$"	| highlight timelineLabelTODO	ctermfg=DarkRed
+syntax match timelineLabelDONE	"\v^DONE:"	| highlight timelineLabelDONE	ctermfg=DarkCyan
+syntax match timelineLabelDEBT	"\v^DEBT:"	| highlight timelineLabelDEBT	ctermfg=DarkYellow	| "<-- 'technical debt' kind of things
+syntax match timelineLabelNOTE	"\v^NOTE:"	| highlight timelineLabelNOTE	ctermfg=DarkCyan
+syntax match timelineLabelREV	"\v^REVIEW:"	| highlight timelineLabelREV	ctermfg=DarkCyan
+syntax match timelineLabelSEE	"\v^SEE:"	| highlight timelineLabelSEE	ctermfg=DarkCyan
+syntax match timelineLabelDEL "\v^(CLEAN|DELETE|REMOVE|KILL):" | highlight timelineLabelDEL ctermfg=DarkRed	| "<-- consider deleting  such-marked data from the file.
+syntax match timelineLabelOMIT "\v^[ \t]*\[\.\.\.\]( #.*)?" | highlight timelineLabelOMIT ctermfg=Blue cterm=italic	| "<-- To mark deleted fragments of log listings, etc.
 "----
 syntax match timelineLabel "DZIENNIK:"
 syntax match timelineLabel "BACKLOG:"
@@ -28,11 +29,11 @@ syntax match timelineComment "\v#.*$"
 highlight timelineComment ctermfg=DarkBlue
 
 "==== Fnancial transaction:
-syntax match timelineTransaction "\v^\$ .*$"
+syntax match timelineTransaction "\v^\$ .+$"
 highlight timelineTransaction ctermfg=DarkGreen
 
 "==== Linux command line statement:
-syntax match timelineShellCommand "\v^\> .*$"
+syntax match timelineShellCommand "\v^\> .+$"
 highlight timelineShellCommand ctermfg=DarkGreen
 
 "==== Dates:
