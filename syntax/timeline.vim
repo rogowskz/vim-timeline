@@ -16,6 +16,8 @@ syntax match timelineLabelDEBT "DEBT:"	"<-- 'technical debt' kind of things
 highlight timelineLabelDEBT ctermfg=DarkYellow
 syntax match timelineLabelNOTE "NOTE:"
 highlight timelineLabelNOTE ctermfg=DarkCyan
+syntax match timelineLabelREVIEW "REVIEW:"
+highlight timelineLabelREVIEW ctermfg=DarkCyan
 syntax match timelineLabelCLEAN "CLEAN:"	"<-- consider deleting  such-marked data from the file.
 highlight timelineLabelCLEAN ctermfg=DarkRed
 "----
