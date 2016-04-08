@@ -9,6 +9,7 @@ endif
 
 "==== Labels:
 syntax match timelineLabelTODO	"\v(^|\!)TODO:(\~)?\!*.+$"	| highlight timelineLabelTODO	ctermfg=DarkRed
+syntax match timelineLabelATTN	"\v\!(\!)+.+$"	| highlight timelineLabelATTN	ctermfg=DarkRed
 syntax match timelineLabelDONE	"\v^DONE:"	| highlight timelineLabelDONE	ctermfg=DarkCyan
 syntax match timelineLabelDEBT	"\v^DEBT:"	| highlight timelineLabelDEBT	ctermfg=DarkYellow	| "<-- 'technical debt' kind of things
 syntax match timelineLabelNOTE	"\v^NOTE:"	| highlight timelineLabelNOTE	ctermfg=DarkCyan
@@ -23,6 +24,9 @@ syntax match timelineLabel "DIYINVESTING:"
 syntax match timelineLabel "INWESTYCJA:"
 "highlight link timelineLabel Label
 highlight timelineLabel ctermfg=DarkCyan
+
+"==== URL:
+syntax match timelineUrl "\vhttp(s)?://[^ \t]+" | highlight timelineUrl ctermfg=Blue 
 
 "==== Comments:
 syntax match timelineComment "\v#.*$"
