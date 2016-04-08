@@ -37,7 +37,7 @@ syntax match timelineTransaction "\v^\$ .+$"
 highlight timelineTransaction ctermfg=DarkGreen
 
 "==== Linux command line statement:
-syntax match timelineShellCommand "\v^\> .+$"
+syntax match timelineShellCommand "\v^[ \t]+\$ .+$"
 highlight timelineShellCommand ctermfg=DarkGreen
 
 "==== Dates:
