@@ -33,11 +33,11 @@ syntax match timelineComment "\v#.*$"
 highlight timelineComment ctermfg=DarkBlue
 
 "==== Fnancial transaction:
-syntax match timelineTransaction "\v^\$ .+$"
+syntax match timelineTransaction "\v^\$\$ .+$"
 highlight timelineTransaction ctermfg=DarkGreen
 
 "==== Linux command line statement:
-syntax match timelineShellCommand "\v^[ \t]+\$ .+$"
+syntax match timelineShellCommand "\v^[ \t]*\$ .+$"
 highlight timelineShellCommand ctermfg=DarkGreen
 
 "==== Dates:
