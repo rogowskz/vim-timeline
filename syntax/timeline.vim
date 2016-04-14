@@ -7,21 +7,22 @@ endif
 
 " http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 
-"==== Labels:
-syntax match timelineLabelTODO	"\vTODO:(\~)?\!*.+$"	| highlight timelineLabelTODO	ctermfg=DarkRed
-syntax match timelineLabelATTN	"\v\!(\!)+.+$"	| highlight timelineLabelATTN	ctermfg=DarkRed
+"==== Labels, from first column:
 syntax match timelineLabelDONE	"\v^DONE:"	| highlight timelineLabelDONE	ctermfg=DarkCyan
 syntax match timelineLabelDEBT	"\v^DEBT:"	| highlight timelineLabelDEBT	ctermfg=DarkYellow	| "<-- 'technical debt' kind of things
 syntax match timelineLabelNOTE	"\v^\{?NOTE:"	| highlight timelineLabelNOTE	ctermfg=DarkCyan
 syntax match timelineLabelREV	"\v^REVIEW:"	| highlight timelineLabelREV	ctermfg=DarkCyan
-syntax match timelineLabelSEE	"\v^SEE:"	| highlight timelineLabelSEE	ctermfg=DarkCyan
-syntax match timelineLabelDEL "\v^(CLEAN|DELETE|REMOVE|KILL):" | highlight timelineLabelDEL ctermfg=DarkRed	| "<-- consider deleting  such-marked data from the file.
-syntax match timelineLabelOMIT "\v^[ \t]*\[\.\.\.\]( .*)?$" | highlight timelineLabelOMIT ctermfg=Blue cterm=italic	| "<-- To mark deleted fragments of log listings, etc.
-"----
-syntax match timelineLabel "DZIENNIK:"
-syntax match timelineLabel "BACKLOG:"
-syntax match timelineLabel "DIYINVESTING:"
-syntax match timelineLabel "INWESTYCJA:"
+syntax match timelineLabelDEL   "\v^(CLEAN|DELETE|REMOVE|KILL):" | highlight timelineLabelDEL ctermfg=DarkRed	| "<-- consider deleting  such-marked data from the file.
+syntax match timelineLabelOMIT  "\v^[ \t]*\[\.\.\.\]( .*)?$" | highlight timelineLabelOMIT ctermfg=Blue cterm=italic	| "<-- To mark deleted fragments of log listings, etc.
+"==== Labels, from any column:
+syntax match timelineLabelTODO	"\vTODO:(\~)?\!*.+$"	| highlight timelineLabelTODO	ctermfg=DarkRed
+syntax match timelineLabelATTN	"\v\!(\!)+.+$"	| highlight timelineLabelATTN	ctermfg=DarkRed
+syntax match timelineLabelSEE	"\vSEE:"	| highlight timelineLabelSEE	ctermfg=DarkCyan
+"==== Labels, personal:
+syntax match timelineLabel "\vDZIENNIK:"
+syntax match timelineLabel "\v^BACKLOG:"
+syntax match timelineLabel "\v^DIYINVESTING:"
+syntax match timelineLabel "\v^INWESTYCJA:"
 "highlight link timelineLabel Label
 highlight timelineLabel ctermfg=DarkCyan
 
