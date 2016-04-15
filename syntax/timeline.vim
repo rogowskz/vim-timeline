@@ -26,6 +26,10 @@ syntax match timelineLabel "\v^INWESTYCJA:"
 "highlight link timelineLabel Label
 highlight timelineLabel ctermfg=DarkCyan
 
+"==== Block markers:
+syntax match timelineMarkBegin	"\v\{?BEGIN\>+"	| highlight timelineMarkBegin	ctermfg=DarkGreen
+syntax match timelineMarkEnd	"\v\<+END\}?"	| highlight timelineMarkEnd	ctermfg=DarkGreen
+
 "==== URL:
 syntax match timelineUrl "\vhttp(s)?://[^ \t]+" | highlight timelineUrl ctermfg=Blue 
 
