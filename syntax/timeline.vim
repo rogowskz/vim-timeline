@@ -19,10 +19,20 @@ syntax match timelineLabelTODO	"\vTODO:(\~)?\!*.+$"	| highlight timelineLabelTOD
 syntax match timelineLabelATTN	"\v\!(\!)+.+$"	| highlight timelineLabelATTN	ctermfg=DarkRed
 syntax match timelineLabelSEE	"\vSEE:"	| highlight timelineLabelSEE	ctermfg=DarkCyan
 "==== Labels, personal:
+syntax match timelineLabel "\vBACKLOG:"
+syntax match timelineLabel "\vBEZ_ROBOCIE:"
+syntax match timelineLabel "\vDIYINVESTING:"
 syntax match timelineLabel "\vDZIENNIK:"
-syntax match timelineLabel "\v^BACKLOG:"
-syntax match timelineLabel "\v^DIYINVESTING:"
-syntax match timelineLabel "\v^INWESTYCJA:"
+syntax match timelineLabel "\vELVASTON:"
+syntax match timelineLabel "\vEMERYTURA:"
+syntax match timelineLabel "\vFINANSE:"
+syntax match timelineLabel "\vINFOSKILLS:"
+syntax match timelineLabel "\vINWESTYCJA:"
+syntax match timelineLabel "\vLINUX:"
+syntax match timelineLabel "\vMUZYKA:"
+syntax match timelineLabel "\vNOWINIARSKA:"
+syntax match timelineLabel "\vPODRÓŻE:"
+syntax match timelineLabel "\vWOJSKO:"
 "highlight link timelineLabel Label
 highlight timelineLabel ctermfg=DarkCyan
 
