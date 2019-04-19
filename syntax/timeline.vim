@@ -21,7 +21,6 @@ syntax match timelineLabelSEE	"\vSEE:"	| highlight timelineLabelSEE	ctermfg=Dark
 "==== Labels, personal:
 syntax match timelineLabel "\vBACKLOG:"
 syntax match timelineLabel "\vBEZ_ROBOCIE:"
-syntax match timelineLabel "\vDIYINVESTING:"
 syntax match timelineLabel "\vDZIENNIK:"
 syntax match timelineLabel "\vELVASTON:"
 syntax match timelineLabel "\vEMERYTURA:"
