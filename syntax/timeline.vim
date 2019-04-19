@@ -44,7 +44,7 @@ syntax match timelineUrl "\vhttp(s)?://[^ \t]+" | highlight timelineUrl ctermfg=
 
 "==== Comments:
 syntax match timelineComment "\v#.*$"
-highlight timelineComment ctermfg=DarkBlue
+highlight timelineComment ctermfg=Blue
 
 "==== Fnancial transaction:
 syntax match timelineTransaction "\v^\$\$ .+$"
